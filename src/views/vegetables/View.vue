@@ -1,24 +1,14 @@
 <template lang="pug">
-  app-search(@focus="searchFocus = true", @blur="searchFocus = false", @input="search")
+  div
+    app-search
+    .list
+      .col(v-for="i in [0, 1, 2]") {{ i }}
 </template>
 
 <script>
-  import AppSearch from 'components/search/View'
+  import AppSearch from 'components/commons/Search'
 
   export default {
-    data () {
-      return {
-        searchFocus: false,
-        searchResult: [],
-        options: [{
-          value: '001',
-          label: '白菜'
-        }, {
-          value: '002',
-          label: '藕'
-        }]
-      }
-    },
     components: { AppSearch }
   }
 </script>
