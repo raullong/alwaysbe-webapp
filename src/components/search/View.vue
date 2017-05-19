@@ -4,20 +4,21 @@
       icon(type="search")
       input(placeholder="请输入名称/简拼/全拼", @focus="focusHandler", @input="inputHandler")
       icon(v-if="focus", type="close", @click.native="blurHandler")
-    history(:historyTags="historyTags")
-    hot(:historyTags="historyTags")
+    record(:title="historyTitle", :tags="historyTags")
+    record(:title="hotTitle", :tags="historyTags")
 
 </template>
 
 <script>
   import Icon from 'components/icon/View'
-  import History from './History'
-  import Hot from './Hot'
+  import Record from './Record'
 
   export default {
     data () {
       return {
         focus: false,
+        historyTitle: '历史搜索',
+        hotTitle: '热门搜索',
         historyTags: [
           { name: '白菜' },
           { name: '野生蜂蜜' },
@@ -29,7 +30,7 @@
         ]
       }
     },
-    components: { Icon, History, Hot },
+    components: { Icon, Record },
     methods: {
       focusHandler () {
         this.focus = true
