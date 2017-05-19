@@ -9,7 +9,8 @@ const routes = [
     component: resolve => require(['views/home/View'], resolve),
     beforeEnter (to, from, next) { to.query._hackRoute ? next(to.query._hackRoute) : next() }
   },
-  {path: '*', redirect: '/home'}
+  { path: '/vegetables', component: resolve => require(['views/vegetables/View'], resolve) },
+  { path: '*', redirect: '/home' }
 ]
 
 export default new Router({
