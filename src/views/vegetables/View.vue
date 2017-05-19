@@ -1,5 +1,5 @@
 <template lang="pug">
-  app-search(placeholder="蔬菜名", :value="name", :options="options")
+  app-search(@focus="searchFocus = true", @blur="searchFocus = false", @input="search")
 </template>
 
 <script>
@@ -8,8 +8,8 @@
   export default {
     data () {
       return {
-        name: '',
-        placeholder: '蔬菜名',
+        searchFocus: false,
+        searchResult: [],
         options: [{
           value: '001',
           label: '白菜'

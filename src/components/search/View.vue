@@ -1,20 +1,35 @@
 <template lang="pug">
   div.search
-    icon(type="search")
-    input(placeholder="请输入名称/简拼/全拼", @focus="focusHandler", @input="inputHandler")
-    icon(v-if="focus", type="close", @click.native="blurHandler")
+    .input
+      icon(type="search")
+      input(placeholder="请输入名称/简拼/全拼", @focus="focusHandler", @input="inputHandler")
+      icon(v-if="focus", type="close", @click.native="blurHandler")
+    history(:historyTags="historyTags")
+    hot(:historyTags="historyTags")
+
 </template>
 
 <script>
   import Icon from 'components/icon/View'
+  import History from './History'
+  import Hot from './Hot'
 
   export default {
     data () {
       return {
-        focus: false
+        focus: false,
+        historyTags: [
+          { name: '白菜' },
+          { name: '野生蜂蜜' },
+          { name: '番茄' },
+          { name: '黄瓜' },
+          { name: '土猪肉' },
+          { name: '樱桃' },
+          { name: '牛肝菌' }
+        ]
       }
     },
-    components: { Icon },
+    components: { Icon, History, Hot },
     methods: {
       focusHandler () {
         this.focus = true
