@@ -1,14 +1,14 @@
 <template lang="pug">
   div
     app-search
-    .list
-      .col(v-for="i in [0, 1, 2]") {{ i }}
+    app-list
 </template>
 
 <script>
   import AppSearch from 'components/commons/Search'
+  import AppList from 'views/list/View'
 
   export default {
-    components: { AppSearch }
+    components: { AppSearch, AppList }
   }
 </script>
