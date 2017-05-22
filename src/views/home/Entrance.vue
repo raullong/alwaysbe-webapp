@@ -20,7 +20,7 @@
         size: 3,
         items: [
           { icon: 'vegetables', to: '/vegetables', title: '蔬菜', url: 'url(/static/image/entrance/vegetables_white.svg)', order: 1, display: true },
-          { icon: 'fruit', to: '/home', title: '水果', url: 'url(/static/image/entrance/fruit_white.svg)', order: 2, display: true },
+          { icon: 'fruit', to: '/test', title: '水果', url: 'url(/static/image/entrance/fruit_white.svg)', order: 2, display: true },
           { icon: 'meat', to: '/home', title: '禽肉', url: 'url(/static/image/entrance/meat_white.svg)', order: 3, display: true },
           { icon: 'tea', to: '/home', title: '茶叶', url: 'url(/static/image/entrance/tea_white.svg)', order: 4, display: true },
           { icon: 'fungus', to: '/home', title: '菌类', url: 'url(/static/image/entrance/fungus_white.svg)', order: 5, display: true },
