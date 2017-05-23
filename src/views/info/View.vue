@@ -1,0 +1,22 @@
+<template lang="pug">
+  image-swiper(:images="images")
+</template>
+
+<script>
+  import ImageSwiper from './Image'
+
+  export default {
+    data () {
+      return {
+        images: [
+          { src: 'http://lorempixel.com/400/250/city' },
+          { src: 'http://lorempixel.com/400/250/food' },
+          { src: 'http://lorempixel.com/400/250/animals' },
+          { src: 'http://lorempixel.com/403/250/city' },
+          { src: 'http://lorempixel.com/403/250/food' }
+        ]
+      }
+    },
+    components: { ImageSwiper }
+  }
+</script>

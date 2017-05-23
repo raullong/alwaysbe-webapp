@@ -1,15 +1,16 @@
 <template lang="pug">
   .card
-    .image(:style="{backgroundImage: good.url}")
-    .content
-      .name    
-        span [{{ good.provide }}] 
-        span {{ good.name }}
-      .descript {{ good.descript }}
-      .price
-        span ¥ {{ price }}
-        span.unit  ／{{ good.unit }}
-        span.pro(v-if="good.promotion") {{ good.promotion }}
+    router-link(:to="'/info'")
+      .image(:style="{backgroundImage: good.url}")
+      .content
+        .name    
+          span [{{ good.provide }}] 
+          span {{ good.name }}
+        .descript {{ good.descript }}
+        .price
+          span ¥ {{ price }}
+          span.unit  ／{{ good.unit }}
+          span.pro(v-if="good.promotion") {{ good.promotion }}
 </template>
 
 <script>

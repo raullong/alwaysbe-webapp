@@ -11,7 +11,7 @@ const routes = [
   },
   { path: '/vegetables', component: resolve => require(['views/vegetables/View'], resolve) },
   { path: '/search', component: resolve => require(['views/search/View'], resolve) },
-  { path: '/test', component: resolve => require(['components/testCard/View'], resolve) },
+  { path: '/info', component: resolve => require(['views/info/View'], resolve) },
   { path: '*', redirect: '/home' }
 ]
 
