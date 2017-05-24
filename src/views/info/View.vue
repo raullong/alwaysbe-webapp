@@ -1,9 +1,12 @@
 <template lang="pug">
-  image-swiper(:images="images")
+  div.info
+    image-swiper(:images="images")
+    app-content
 </template>
 
 <script>
   import ImageSwiper from './Image'
+  import AppContent from './Content'
 
   export default {
     data () {
@@ -17,6 +20,6 @@
         ]
       }
     },
-    components: { ImageSwiper }
+    components: { ImageSwiper, AppContent }
   }
 </script>

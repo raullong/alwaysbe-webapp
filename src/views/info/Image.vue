@@ -21,7 +21,7 @@
     },
     mounted () {
       const instance = new Swiper(this.$el, {
-        autoplay: 5000,
+        autoplay: 2000,
         updateOnImagesReady: true
       })
       this.$on('reset', slide => instance.slideTo(slide))
