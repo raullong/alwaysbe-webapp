@@ -2,11 +2,13 @@
   div.info
     image-swiper(:images="images")
     app-content
+    app-footer
 </template>
 
 <script>
   import ImageSwiper from './Image'
   import AppContent from './Content'
+  import AppFooter from './Footer'
 
   export default {
     data () {
@@ -20,6 +22,6 @@
         ]
       }
     },
-    components: { ImageSwiper, AppContent }
+    components: { ImageSwiper, AppContent, AppFooter }
   }
 </script>
